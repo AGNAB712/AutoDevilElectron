@@ -8,6 +8,7 @@ import CodeButton from "../buttons/CodeButton.tsx";
 import AutoNameEditor from "./topbar/AutoNameEditor.tsx";
 import NavDivider from "./topbar/NavDivider.tsx";
 import DownloadButton from "../buttons/DownloadButton.tsx";
+import SetFilePathButton from "../buttons/SetFilePathButton.tsx";
 
 export default function TopBar() {
 
@@ -32,6 +33,7 @@ export default function TopBar() {
             <AutoNameEditor/>
             <NavDivider/>
             <DownloadButton/>
+            <SetFilePathButton/>
             <UploadButton/>
             <CodeButton/>
             <NavDivider/>

@@ -6,10 +6,12 @@
   "private": true,
   "version": "0.3.2",
   "type": "module",
+  "main": "main.js",
   "license": "GPL-3.0",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "start": "electron .",
     "preview": "vite preview",
     "lint": "eslint --ext .ts,.tsx src"
   },
@@ -41,6 +43,8 @@
   },
   "dependencies": {
     "@fontsource/roboto": "^5.1.0",
+    "electron": "^44.3.0",
+    "electron-vite": "^5.0.0",
     "optics-ts": "^2.4.1",
     "react-sortablejs": "^6.1.4",
     "react-syntax-highlighter": "^16.1.0",

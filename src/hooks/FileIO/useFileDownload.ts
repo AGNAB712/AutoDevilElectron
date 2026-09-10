@@ -1,5 +1,6 @@
-import {atom, useSetAtom} from "jotai";
+import {atom, useSetAtom, useAtomValue} from "jotai";
 import {autoDataAtom} from "../AutoData/useAutoData.ts";
+import { filePathAtom } from "./filePathAtom.ts"
 import serializeAutoData from "../../utils/serialization/serializeAutoData.ts";
 
 export const fileDownloadAtom = atom(null, (get) => {
@@ -8,11 +9,16 @@ export const fileDownloadAtom = atom(null, (get) => {
     const blob = serializeAutoData(autoData);
     const url = URL.createObjectURL(blob);
 
+    const filePath = get(filePathAtom)
+    console.log(filePath, blob)
+
     // Download it as a file
     const a = document.createElement("a");
     a.href = url;
     a.download = `${autoData.name || "auto"}.json`;
     a.click();
+
+   
 
     // Clean up the URL object
     URL.revokeObjectURL(url);
