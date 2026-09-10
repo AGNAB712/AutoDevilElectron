@@ -16,22 +16,21 @@ Fork of AutoDevil's web app to work with electron.
 
 ## Planned features
 
- - Menu for hooking on to robot repos to save and read autonomi automatically
- - Autonomous selection menu at startup
+ - Hooking on to robot repos to save and read autonomi automatically
+ - Autonomous selection menu at startup (from saved autonomi in robot repo)
  - Autosteps:
     - Add autosteps as able to be enabled in different autonomi
     - Automatically populate actions from the autosteps loaded to the autonomi
- - 
 
 ## Planned file structure
 
 - autonomous
-    - (autosteps)[https://docs.devilbots.org/tutorials/autonomous#autosteps]
+    - [autosteps](https://docs.devilbots.org/tutorials/autonomous#autosteps)
         - (multiple autostep files)
     - paths
         - (path jsons)
     - autonomous
-        - (autonomous)
+        - (autonomous, generated from path jsons)
 
 ## How to Use
 
