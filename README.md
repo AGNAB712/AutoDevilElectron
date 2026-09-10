@@ -2,10 +2,9 @@
 > AutoDevil is still in **early beta**. If you run into any bugs or issues, don\'t hesitate to report them in
 > the [issues tab](https://github.com/UWST-Robotics/AutoDevil/issues).
 
-# AutoDevil
+# AutoDevilElectron
 
-A simple web-app to plot a preset path for a VEX/FIRST competitive robot. Designed and built
-by [DevilBots](https://devilbots.org/) from UW-Stout.
+Fork of AutoDevil's web app to work with electron.
 
 ## Features
 
@@ -15,12 +14,28 @@ by [DevilBots](https://devilbots.org/) from UW-Stout.
 - 🎨 Customize field layout and robot dimensions
 - 🤖 Compatible w/ VEX, FIRST, and any other 3rd-party ecosystems
 
+## Planned features
+
+ - Menu for hooking on to robot repos to save and read autonomi automatically
+ - Autonomous selection menu at startup
+ - Autosteps:
+    - Add autosteps as able to be enabled in different autonomi
+    - Automatically populate actions from the autosteps loaded to the autonomi
+ - 
+
+## Planned file structure
+
+- autonomous
+    - (autosteps)[https://docs.devilbots.org/tutorials/autonomous#autosteps]
+        - (multiple autostep files)
+    - paths
+        - (path jsons)
+    - autonomous
+        - (autonomous)
+
 ## How to Use
 
-1. Tool is publically available at [auto.devilbots.org](https://auto.devilbots.org/).
-2. Customize field layout and robot dimensions in the settings dialog
-3. Customize path/events to your liking
-4. Paths are exported to custom path files. How you integrate these files is up to your team
+to be updated
 
 ## File Commands
 

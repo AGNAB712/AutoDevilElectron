@@ -2,6 +2,7 @@
 import { app, BrowserWindow, dialog, ipcMain } from 'electron';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import * as fileio from './src/electron/fileio.cjs'
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -28,6 +29,9 @@ function createWindow() {
 
 app.whenReady().then(() => {
     ipcMain.handle('dialog:openFile', handleFileOpen)
+    ipcMain.handle('createDir', ((event, ...args) => {
+      const result = fileio.createDirectory(...args)}
+    ))
     createWindow()
 });
 app.on('window-all-closed', () => {

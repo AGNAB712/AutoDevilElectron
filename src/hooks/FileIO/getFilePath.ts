@@ -1,6 +1,7 @@
 import {atom, useSetAtom} from "jotai";
 import { filePathAtom } from "./filePathAtom"
 
+
 export const filepathQueryAtom = atom(
   null,
   async (_, set, _payload?: UploadPayload) => {
@@ -10,6 +11,7 @@ export const filepathQueryAtom = atom(
       return
     }
 
+    await window.electronAPI.createDir(filePath, 'autonomous')
     set(filePathAtom, filePath)
   }
 )
